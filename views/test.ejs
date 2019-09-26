@@ -1,0 +1,26 @@
+<%- include('part/html_header')  %>
+<%- include('part/html_nav')  %>
+<div class="container">
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">姓名</th>
+            <th scope="col">年紀</th>
+            <th scope="col">UID</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+         <% for (var i =0;i<test.length;i++){ %>
+            <tr>
+            <th scope="row"><%= (i+1)%></th>
+            <td><%= test[i].name%></td>
+            <td><%= test[i].age%></td>
+            <td><%= test[i].id%></td>
+          </tr>
+          <% }  %>
+        </tbody>
+      </table>
+    </div>
+      <%- include('part/html_footer')  %>

@@ -1,0 +1,34 @@
+<%- include('part/html_header')  %>
+<%- include('part/html_nav')  %>
+
+<div class="container">
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>負責人</th>
+            <th>註冊日</th>
+            <th>公司名</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <% for (let D of rows) {%>
+        <tr>
+            <td scope="row"><%= D.principal %></td>
+            <td><%= D.created_at %></td>
+            <td><%= D.company %></td>
+        </tr>
+     <% } %>
+    </tbody>
+</table>
+
+</div>
+<script>
+// console.log(rows)
+
+</script>
+
+
+<%- include('part/html_footer')  %>
